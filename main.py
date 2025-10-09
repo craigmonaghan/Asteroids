@@ -1,18 +1,18 @@
 import pygame
 from constants import *
+from asteroid import Asteroid
 from player import Player
 
-
+updatable = pygame.sprite.Group()
+drawable = pygame.sprite.Group()
+asteroid = pygame.sprite.Group()
 
 def main():
     pygame.init()
     clock = pygame.time.Clock()
-    dt = 0
-    
-    print("Starting Asteroids!")
-    print(f"Screen width: {SCREEN_WIDTH}")
-    print(f"Screen height: {SCREEN_HEIGHT}")
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    Asteroid.containers = (asteroid, updatable, drawable)
+    Player.containers = (updatable, drawable)    
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     
     while True:
@@ -20,21 +20,16 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
-        screen.fill((0, 0, 0))
+        
         dt = clock.tick(60) / 1000
-        player.update(dt)
-        player.draw(screen)
+        updatable.update(dt)
+        
+        screen.fill((0, 0, 0))
+        for sprite in drawable:
+            sprite.draw(screen)
+        
         pygame.display.flip()
         
-
-
-
-
-
-
-
-
-
 
 if __name__ == "__main__":
     main()
