@@ -5,7 +5,11 @@ SCREEN_HEIGHT = 720
 PLAYER_RADIUS = 20
 PLAYER_TURN_SPEED = 300
 PLAYER_SPEED = 200
+SHOT_RADIUS = 5
+PLAYER_SHOOT_SPEED = 500
+PLAYER_SHOOT_COOLDOWN = 0.3
 
+#Did not write any of this, This code is directly from boot.dev. Copy-pasted as advised.
 ASTEROID_MIN_RADIUS = 20
 ASTEROID_KINDS = 3
 ASTEROID_SPAWN_RATE = 0.8  # seconds
