@@ -4,15 +4,13 @@ A classic Asteroids clone built with Python and Pygame.
 
 ## ✨ Features
 
-- Classic arcade gameplay
-- Smooth 60 FPS rendering
 - Asteroid spawning and collision detection
 - Player shooting mechanics with cooldown
 
 ## 📋 Requirements
 
 - Python 3.11+ (see `.python-version`)
-- uv (recommended) or pip for dependency management
+- uv
 
 ## 🛠️ Setup
 
@@ -21,15 +19,6 @@ A classic Asteroids clone built with Python and Pygame.
 ```bash
 uv sync
 uv run main.py
-```
-
-### Using pip
-
-```bash
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-python main.py
 ```
 
 ## 🎮 Controls
@@ -58,10 +47,11 @@ python main.py
 
 - Use `uv.lock` for reproducible installations
 - Check `.gitignore` for excluded build artifacts
-- Format and lint with your preferred tools
+
 
 ## 📝 License
 
 Educational project from [Boot.dev](https://boot.dev)
 
 ---
+
